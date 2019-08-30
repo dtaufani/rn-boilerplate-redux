@@ -44,7 +44,7 @@ export default connect(state => ({ todo: state.todo }))(props => {
                 </Body>
                 <Right />
             </Header>
-            <Content>
+            <Content padder>
                 <Form>
                     <Item floatingLabel>
                         <Label>To-do</Label>
@@ -54,7 +54,11 @@ export default connect(state => ({ todo: state.todo }))(props => {
                             autoFocus
                         />
                     </Item>
-                    <Button block onPress={() => submit()}>
+                    <Button
+                        block
+                        onPress={() => submit()}
+                        style={{ marginTop: 16 }}
+                    >
                         <Text>Submit</Text>
                     </Button>
                 </Form>
